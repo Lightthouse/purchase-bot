@@ -1,0 +1,2 @@
+class PurchaseException(Exception):
+    pass

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main{
+            width: 200px;
+            height: 300px;
+            padding: 1em;
+            background: rebeccapurple;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .main h2 {
+            text-align: center;
+        }
+
+        .increment{
+            background: darkred;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2> Счетчик нажатий</h2>
+        <div>счет: <span class="count">0</span> </div>
+        <button class="increment">click me</button>
+    </div>
+
+<script>
+    const incrementButton = document.querySelector('.increment');
+    const count = document.querySelector('.count');
+    incrementButton.addEventListener('click', (e) => {
+         count.innerHTML = Number(count.innerHTML) + 1;
+    })
+    // alert("greeding")
+</script>
+</body>
+</html>
